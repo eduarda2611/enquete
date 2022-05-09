@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Enquete</title>
+    <style>
+        body{
+            margin: auto;
+            height: 350px;
+            width: 350px;
+        }
+        .circulo{
+            background-color: #D6A2E8;
+            text-align: center;
+            display: flex;
+            margin: 0 auto;
+            align-items: center;
+            font-size: xx-large;
+            height: 300px;
+            width: 300px;
+            border-radius: 50%;
+            margin: auto;
+            position: relative;
+            left: -90px;
+        }
+        .sim {
+            display: inline-block;
+            padding: 15px 25px;
+            font-size: 15px;
+            color: #fff;
+            background-color: #00FF00;
+             
+        }
+        .sim:active {
+            background-color:#00FF00;
+            box-shadow: 0 5px #666;
+            transform: translateY(4px);
+            background-color :#00FF00;
+        }
+        .nao {
+            display: inline-block;
+            padding: 15px 25px;
+            font-size: 15px;
+            text-align: center;
+            outline: none;
+            color: #fff;
+            background-color: #FF0000;   
+        }
+        .nao:active {
+            background-color: red;
+            box-shadow: 0 5px #666;
+        }
+        .final{
+            color: darkcyan;
+            font-weight: bolder;
+            font-size: larger;
+        }
+        #ify{
+            background-color: #00FF00;
+            width: 10px;
+            color: black;   
+        }
+        #ifn{
+            background-color:#FF0000;  
+            width: 10px;
+            color: black;     
+        }
+    </style>
+</head>
+<body>
+  <div class="circulo">
+    Você concorda com o projeto de ajuda e acolhimento disponivel na escola?
+  </div>
+  <p></p>
+  <button type="button" class="sim" onclick="resultadoSim()">SIM</button>
+  <button type="button" class="nao" onclick="resultadoNao()">NÃO</button>
+  <p></p>
+  <div class="final">Resultado:</div>
+  <div class="final">Sim</div>
+  <div id="ify">0</div>
+  <div class="final">Não</div>
+  <div id="ifn">0</div>
+  <script>
+    let incremento = 0;
+    let largura = 0;
+    let mover = 0;
+    let cont = 0;
+    let largura2 = 0;
+    let getval1 = 5;
+    let getval2 = 5;
+ function resultadoSim(){
+    incremento++;
+    largura = largura + 20;
+    document.getElementById("ify").innerHTML = incremento;
+    document.querySelector("#ify").style.width = largura+"px";
+        document.querySelector(".final").style.left = mover+"px";
+        document.querySelector("#ify").style.left = mover+"px";
+        document.querySelector("#ifn").style.left = mover+"px";
+        document.querySelector("#nao").style.left = mover+"px";
+        document.querySelector("#sim").style.left = mover+"px";
+    }   
+function resultadoNao(){
+    cont++;
+    document.getElementById("ifn").innerHTML = cont;
+    largura2 = largura2 + 20;
+    document.querySelector("#ifn").style.width = largura2+"px";
+        document.querySelector(".final").style.left = mover+"px";
+        document.querySelector("#ify").style.left = mover+"px";
+        document.querySelector("#ifn").style.left = mover+"px";
+        document.querySelector("#nao").style.left = mover+"px";
+        document.querySelector("#sim").style.left = mover+"px";
+    }
+  </script>  
+</body>
+</html>
